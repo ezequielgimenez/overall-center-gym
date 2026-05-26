@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --breakpoint-xs: 22.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-header: var(--font-geist-header);
+  --font-hero: var(--font-geist-hero);
+  --font-card: var(--font-geist-card);
+  --font-description: var(--font-geist-jakarta);
+  --font-mono: var(--font-geist-oswald);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2e2e2e;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
