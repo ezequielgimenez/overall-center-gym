@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #2e2e2e;
   --foreground: #171717;
 }
 
@@ -17,12 +17,6 @@
   --font-card: var(--font-geist-card);
   --font-description: var(--font-geist-jakarta);
   --font-mono: var(--font-geist-oswald);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #2e2e2e;
-  }
 }
 
 body {
