@@ -48,7 +48,7 @@ export default function HeroComp() {
               </span>
             </h1>
 
-            <p className="font-description font-medium text-[24px] sm:text-[28px] md:text-[35px] tracking-[0.08em] mt-[24px] sm:mt-[16px]">
+            <p className="font-description font-medium text-[24px] sm:text-[28px] md:text-[35px] tracking-[0.08em] mt-[24px] sm:mt-[16px] text-white">
               El gimnasio que nunca{" "}
               <span className="text-[#F1EC16]">duerme.</span>
             </p>
