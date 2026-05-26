@@ -1,4 +1,3 @@
-import HeaderComp from "./components/Header";
 import HeroComp from "./components/Hero";
 import PricesSection from "./components/Prices";
 import SedesComp from "./components/Sedes";
