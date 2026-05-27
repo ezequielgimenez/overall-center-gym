@@ -61,6 +61,7 @@ export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
                 width={25}
                 height={25}
                 alt="menu-2"
+                unoptimized
               />
             </div>
           </button>
