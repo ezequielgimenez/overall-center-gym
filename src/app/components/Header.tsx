@@ -63,7 +63,7 @@ export default function HeaderComp() {
         </div>
 
         <Link
-          className="py-5 font-description font-medium text-xl text-[#ccc8c8]"
+          className="pt-5 font-description font-medium text-xl text-[#ccc8c8]"
           href="/#planes"
           onClick={openNav}
         >
@@ -77,7 +77,7 @@ export default function HeaderComp() {
           Sedes
         </Link>
         <Link
-          className="py-15 font-description font-medium text-xl text-[#ccc8c8]"
+          className="pb-15 font-description font-medium text-xl text-[#ccc8c8]"
           href="/#redes"
           onClick={openNav}
         >
