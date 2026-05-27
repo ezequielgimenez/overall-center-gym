@@ -30,51 +30,69 @@ export default function RedesComp() {
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-[32px] sm:gap-[60px] lg:gap-[100px] pb-[120px] lg:pb-[200px]">
         {/* INSTAGRAM */}
-        <div className="group flex items-center justify-start gap-[16px] w-[170px] cursor-pointer">
-          <Image
-            src="/icons/instagram2.png"
-            width={32}
-            height={32}
-            alt="Instagram"
-            unoptimized
-            className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
-          />
+        <div className=" cursor-pointer">
+          <a
+            href="https://www.instagram.com/overallcentergym"
+            className="group flex items-center justify-start gap-[16px] w-[170px]"
+            target="_blank"
+          >
+            <Image
+              src="/icons/instagram2.png"
+              width={32}
+              height={32}
+              alt="Instagram"
+              unoptimized
+              className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
+            />
 
-          <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
-            Instagram
-          </p>
+            <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
+              Instagram
+            </p>
+          </a>
         </div>
 
         {/* FACEBOOK */}
-        <div className="group flex items-center justify-start gap-[16px] w-[170px] cursor-pointer">
-          <Image
-            src="/icons/facebook2.png"
-            width={32}
-            height={32}
-            alt="Facebook"
-            unoptimized
-            className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
-          />
+        <div className="cursor-pointer">
+          <a
+            href="https://www.facebook.com/profile.php?id=100063526722638"
+            className="group flex items-center justify-start gap-[16px] w-[170px]"
+            target="_blank"
+          >
+            <Image
+              src="/icons/facebook2.png"
+              width={32}
+              height={32}
+              alt="Facebook"
+              unoptimized
+              className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
+            />
 
-          <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
-            Facebook
-          </p>
+            <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
+              Facebook
+            </p>
+          </a>
         </div>
 
         {/* TIKTOK */}
-        <div className="group flex items-center justify-start gap-[16px] w-[170px] cursor-pointer">
-          <Image
-            src="/icons/tiktok2.png"
-            width={32}
-            height={32}
-            alt="Tiktok"
-            unoptimized
-            className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
-          />
+        <div className="cursor-pointer">
+          <a
+            href="https://www.tiktok.com/@overallcentergym"
+            className="group flex items-center justify-start gap-[16px] w-[170px] "
+            target="_blank"
+          >
+            <Image
+              src="/icons/tiktok2.png"
+              width={32}
+              height={32}
+              alt="Tiktok"
+              unoptimized
+              className="transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(241,236,22,0.8)] shrink-0"
+            />
 
-          <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
-            Tiktok
-          </p>
+            <p className="text-white font-extralight text-[16px] transition-colors duration-300 group-hover:text-[#F1EC16]">
+              Tiktok
+            </p>
+          </a>
         </div>
       </div>
     </div>
