@@ -32,7 +32,7 @@ export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
   return (
     <>
       {/* MOBILE */}
-      <div data-aos="fade-up" className="block lg:hidden mt-[40px] relative">
+      <div className="block lg:hidden mt-[40px] relative">
         {/* BOTON ACTUAL */}
         <div className="flex justify-center items-center w-full">
           <button
@@ -136,10 +136,7 @@ export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
       </div>
 
       {/* DESKTOP */}
-      <div
-        data-aos="fade-up"
-        className="hidden lg:flex justify-center items-center gap-[44px] flex-wrap mt-[70px]"
-      >
+      <div className="hidden lg:flex justify-center items-center gap-[44px] flex-wrap mt-[70px]">
         {sedes.map((sede) => (
           <button
             key={sede.id}
