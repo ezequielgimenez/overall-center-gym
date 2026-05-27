@@ -261,6 +261,7 @@ const sedes = [
 ];
 
 import Image from "next/image";
+import Link from "next/link";
 import SedeButtons from "./SedeButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -466,9 +467,12 @@ export default function SedesComp() {
               </div>
             </div>
 
-            <button className="bg-[#F1EC16] px-[50px] py-[12px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300 self-center lg:self-start">
+            <Link
+              href="/formulario"
+              className="bg-[#F1EC16] px-[50px] py-[12px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300 self-center lg:self-start"
+            >
               Inscribirme ahora
-            </button>
+            </Link>
           </div>
         </div>
       </div>

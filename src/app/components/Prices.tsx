@@ -141,7 +141,7 @@ const sedes = [
 ];
 
 import SedeButtons from "./SedeButtons";
-
+import Link from "next/link";
 import { useState } from "react";
 
 export default function PricesSection() {
@@ -213,9 +213,12 @@ export default function PricesSection() {
               {sedeActual?.precios.mensual}
             </p>
             <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
-              <button className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300">
+              <Link
+                href="/formulario"
+                className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
+              >
                 Inscribirme ahora
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -238,9 +241,12 @@ export default function PricesSection() {
               Precio por mes
             </p>
             <div className="flex justify-center items-center  pb-[27px]">
-              <button className="bg-[#626262] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-white cursor-pointer font-description font-bold text-[16px] hover:bg-[#969691] transition-colors duration-300">
+              <Link
+                href="/formulario"
+                className="bg-[#626262] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-white cursor-pointer font-description font-bold text-[16px] hover:bg-[#969691] transition-colors duration-300"
+              >
                 Inscribirme ahora
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -261,9 +267,12 @@ export default function PricesSection() {
               {sedeActual?.precios.trimestral}
             </p>
             <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
-              <button className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300">
+              <Link
+                href="/formulario"
+                className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
+              >
                 Inscribirme ahora
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -284,9 +293,12 @@ export default function PricesSection() {
               {sedeActual?.precios.semestral}
             </p>
             <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
-              <button className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300">
+              <Link
+                href="/formulario"
+                className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
+              >
                 Inscribirme ahora
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -307,9 +319,12 @@ export default function PricesSection() {
               {sedeActual?.precios.anual}
             </p>
             <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
-              <button className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300">
+              <Link
+                href="/formulario"
+                className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
+              >
                 Inscribirme ahora
-              </button>
+              </Link>
             </div>
           </div>
         </div>

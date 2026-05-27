@@ -3,11 +3,11 @@ export default function FormComp() {
     <div className="flex flex-col justify-center items-center px-[20px]">
       {/* TITULOS */}
       <div className="text-center pt-[100px] lg:pt-[172px] pb-[60px] lg:pb-[110px]">
-        <p className="font-description text-[14px] lg:text-[16px] pb-[16px] lg:pb-[20px]">
+        <p className="text-white font-description text-[14px] lg:text-[16px] pb-[16px] lg:pb-[20px]">
           COMPLETÁ TU INSCRIPCIÓN
         </p>
 
-        <h2 className="font-hero text-[34px] sm:text-[42px] lg:text-[60px] leading-[42px] lg:leading-normal">
+        <h2 className="font-hero text-[34px] text-white sm:text-[42px] lg:text-[60px] leading-[42px] lg:leading-normal">
           COMPLETÁ EL FORMULARIO
         </h2>
 
@@ -146,7 +146,7 @@ export default function FormComp() {
             "
           />
 
-          <p className="text-center text-[13px] lg:text-[14px] pt-2 pb-[20px] lg:pb-[30px] leading-[22px]">
+          <p className="text-center text-white text-[13px] lg:text-[14px] pt-2 pb-[20px] lg:pb-[30px] leading-[22px]">
             Luego podrás realizar el pago de forma segura a través de Mercado
             Pago.
           </p>
