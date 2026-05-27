@@ -335,7 +335,7 @@ export default function SedesComp() {
       </div>
 
       {/* CONTENIDO */}
-      <div className="flex flex-col lg:flex-row justify-center items-center h-auto px-[32px] lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[96px] mt-[70px]">
+      <div className="flex flex-col lg:flex-row justify-center items-center h-auto lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[40px] lg:gap-[96px] mt-[70px]">
         {/* CARRUSEL */}
         <div
           ref={emblaRef}
