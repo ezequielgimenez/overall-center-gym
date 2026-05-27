@@ -116,7 +116,7 @@ export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
               >
                 {sede.nombre}
                 {sede.preventa && (
-                  <span className="bg-white text-sm text-[#454242]">
+                  <span className="bg-white text-sm text-[#454242] rounded-[16px] mx-2">
                     {sede.preventa}
                   </span>
                 )}
