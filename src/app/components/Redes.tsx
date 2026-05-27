@@ -3,12 +3,13 @@ import Image from "next/image";
 export default function RedesComp() {
   return (
     <div id="redes" className="pt-[80px] lg:pt-[120px] text-center px-4">
-      <p className="font-description text-[14px] lg:text-[16px] text-white tracking-[1.6px]">
-        CONTÁCTATE CON NOSOTROS
-      </p>
+      <div data-aos="fade-up">
+        <p className="font-description text-[14px] lg:text-[16px] text-white tracking-[1.6px]">
+          CONTÁCTATE CON NOSOTROS
+        </p>
 
-      <h3
-        className="
+        <h3
+          className="
           text-[38px]
           sm:text-[45px]
           lg:text-[60px]
@@ -24,11 +25,15 @@ export default function RedesComp() {
           pb-[70px]
           lg:pb-[100px]
         "
-      >
-        NUESTRAS <span className="text-[#F1EC16]">REDES</span>
-      </h3>
+        >
+          NUESTRAS <span className="text-[#F1EC16]">REDES</span>
+        </h3>
+      </div>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-[32px] sm:gap-[60px] lg:gap-[100px] pb-[120px] lg:pb-[200px]">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col sm:flex-row justify-center items-center gap-[32px] sm:gap-[60px] lg:gap-[100px] pb-[120px] lg:pb-[200px]"
+      >
         {/* INSTAGRAM */}
         <div className=" cursor-pointer">
           <a

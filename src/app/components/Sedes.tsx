@@ -310,7 +310,10 @@ export default function SedesComp() {
   return (
     <section id="sedes">
       {/* TITULOS */}
-      <div className="pt-[40px] lg:pt-[80px] flex flex-col items-center px-[20px]">
+      <div
+        data-aos="fade-up"
+        className="pt-[40px] lg:pt-[80px] flex flex-col items-center px-[20px]"
+      >
         <p className="font-description font-normal text-[16px] text-center text-white mt-6 tracking-[1.6px] leading-[24px]">
           ELEGÍ DONDE EMPEZAR
         </p>
@@ -335,7 +338,10 @@ export default function SedesComp() {
       </div>
 
       {/* CONTENIDO */}
-      <div className="flex flex-col lg:flex-row justify-center items-center h-auto lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[40px] lg:gap-[96px] mt-[70px]">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col lg:flex-row justify-center items-center h-auto lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[40px] lg:gap-[96px] mt-[70px]"
+      >
         {/* CARRUSEL */}
         <div
           ref={emblaRef}

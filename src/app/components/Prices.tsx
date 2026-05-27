@@ -151,7 +151,7 @@ export default function PricesSection() {
 
   return (
     <section id="planes" className="lg:px-25">
-      <div className="pt-[40px] lg:pt-[80px] px-[20px]">
+      <div data-aos="fade-up" className="pt-[40px] lg:pt-[80px] px-[20px]">
         <p
           className="
       font-description
@@ -190,7 +190,10 @@ export default function PricesSection() {
         onSelect={setSelectedSede}
       />
 
-      <div className="flex flex-wrap justify-center items-center py-24 gap-[24px] max-w-[962px] mx-auto">
+      <div
+        data-aos="fade-up"
+        className="flex flex-wrap justify-center items-center py-24 gap-[24px] max-w-[962px] mx-auto"
+      >
         {/* <p>{sedeActual?.precios.mensual}</p>
         <p>{sedeActual?.precios.trimestral}</p> */}
 

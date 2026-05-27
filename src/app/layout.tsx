@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import HeaderComp from "./components/Header";
 import FooterComp from "./components/Footer";
+import AOSProvider from "./AosProvider";
+
 import {
   Montserrat,
   Anton,
@@ -52,6 +54,7 @@ export default function RootLayout({
         className={`${geistMontserrat.variable} ${geistAnton.variable} ${geistOutfit.variable} ${geistPlusJakarta.variable} ${geistOswald.variable} antialiased`}
       >
         <HeaderComp />
+        <AOSProvider />
         <main>{children}</main>
         <FooterComp />
       </body>
