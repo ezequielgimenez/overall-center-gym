@@ -195,7 +195,7 @@ export default function PricesSection() {
         <p>{sedeActual?.precios.trimestral}</p> */}
 
         <div className="flex justify-center w-[302px] h-[448px] bg-[#626262] rounded-[24px] cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.05]">
-          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px]">
+          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px] text-white">
             <h5 className="font-card font-bold text-[30px] pl-[27px] pt-[27px]">
               Mensual
             </h5>
@@ -243,7 +243,7 @@ export default function PricesSection() {
         </div>
 
         <div className="flex justify-center w-[302px] h-[448px] bg-[#626262] rounded-[24px] cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.05]">
-          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px]">
+          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px] text-white">
             <h5 className="font-card font-bold text-[30px] pl-[27px] pt-[27px]">
               3 meses
             </h5>
@@ -266,9 +266,9 @@ export default function PricesSection() {
         </div>
 
         <div className="flex justify-center w-[302px] h-[448px] bg-[#626262] rounded-[24px] cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.05]">
-          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px]">
+          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px] text-white">
             <h5 className="font-card font-bold text-[30px] pl-[27px] pt-[27px]">
-              3 meses
+              6 meses
             </h5>
             <p className="font-description font-bold text-[16px] pl-[27px] pt-[16px] pb-[24px]">
               Acceso por 6 meses
@@ -289,7 +289,7 @@ export default function PricesSection() {
         </div>
 
         <div className="flex justify-center w-[302px] h-[448px] bg-[#626262] rounded-[24px] cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.05]">
-          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px]">
+          <div className="w-[290px] h-[430px] border border-white/25 rounded-[19px] m-[8px] text-white">
             <h5 className="font-card font-bold text-[30px] pl-[27px] pt-[27px]">
               Anual
             </h5>
