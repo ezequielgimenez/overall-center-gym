@@ -17,14 +17,20 @@ type Sede = {
 
 type Props = {
   sedes: Sede[];
-  selectedSede: number;
+  selectedSede: number | null;
   onSelect: (id: number) => void;
+  title?: string;
 };
 
 import { useState } from "react";
 import Image from "next/image";
 
-export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
+export default function SedeButtons({
+  sedes,
+  selectedSede,
+  onSelect,
+  title = "Ver precios por sede",
+}: Props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const sedeActual = sedes.find((sede) => sede.id === selectedSede);
@@ -54,7 +60,7 @@ export default function SedeButtons({ sedes, selectedSede, onSelect }: Props) {
               shrink-0
           "
           >
-            {sedeActual?.nombre}
+            {sedeActual?.nombre ?? title}
             <div>
               <Image
                 src="/logo/menu2.png"

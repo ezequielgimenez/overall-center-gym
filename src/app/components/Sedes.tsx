@@ -3,7 +3,7 @@
 const sedes = [
   {
     id: 1,
-    nombre: "ALEN",
+    nombre: "SEDE AV ALEM",
     preventa: "PRÓXIMA SEDE - PREVENTA $30.000",
     precios: {
       mensual: "$30.000",
@@ -22,7 +22,7 @@ const sedes = [
 
   {
     id: 2,
-    nombre: "SAN MARTÍN",
+    nombre: "SEDE SAN MARTÍN",
     precios: {
       mensual: "$45.000",
       plus: "$54.000",
@@ -47,7 +47,7 @@ const sedes = [
 
   {
     id: 3,
-    nombre: "BELGRANO",
+    nombre: "SEDE BELGRANO",
     precios: {
       mensual: "$48.000",
       plus: "$54.000",
@@ -75,7 +75,7 @@ const sedes = [
 
   {
     id: 4,
-    nombre: "CÓRDOBA",
+    nombre: "SEDE CÓRDOBA",
     precios: {
       mensual: "$45.000",
       plus: "$54.000",
@@ -99,7 +99,7 @@ const sedes = [
 
   {
     id: 5,
-    nombre: "LOMAS",
+    nombre: "SEDE LOMAS",
     precios: {
       mensual: "$48.000",
       plus: "$54.000",
@@ -123,7 +123,7 @@ const sedes = [
   },
   {
     id: 6,
-    nombre: "9 DE JULIO",
+    nombre: "SEDE 9 DE JULIO",
     precios: {
       mensual: "$48.000",
       plus: "$54.000",
@@ -148,7 +148,7 @@ const sedes = [
 
   {
     id: 7,
-    nombre: "LA BANDA",
+    nombre: "SEDE LA BANDA",
     precios: {
       mensual: "$48.000",
       plus: "$54.000",
@@ -179,7 +179,7 @@ const sedes = [
 
   {
     id: 8,
-    nombre: "ADOLFO",
+    nombre: "SEDE ADOLFO",
     precios: {
       mensual: "$45.000",
       plus: "$54.000",
@@ -206,7 +206,7 @@ const sedes = [
   },
   {
     id: 9,
-    nombre: "CARIOLA",
+    nombre: "SEDE CARIOLA",
     precios: {
       mensual: "$45.000",
       plus: "$54.000",
@@ -233,7 +233,7 @@ const sedes = [
   },
   {
     id: 10,
-    nombre: "YERBA BUENA",
+    nombre: "SEDE YERBA BUENA",
     precios: {
       mensual: "$45.000",
       plus: "$54.000",
@@ -268,10 +268,9 @@ import Autoplay from "embla-carousel-autoplay";
 
 import { useEffect, useState } from "react";
 export default function SedesComp() {
-  const [selectedSede, setSelectedSede] = useState(2);
+  const [selectedSede, setSelectedSede] = useState<number | null>(null);
   const sedesVisibles = sedes.filter((sede) => sede.visible);
-  const sedeActual = sedesVisibles.find((sede) => sede.id === selectedSede)!;
-
+  const sedeActual = sedesVisibles.find((sede) => sede.id === selectedSede);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -335,18 +334,21 @@ export default function SedesComp() {
           sedes={sedesVisibles}
           selectedSede={selectedSede}
           onSelect={setSelectedSede}
+          title="Conocé nuestras sedes"
         />
       </div>
 
       {/* CONTENIDO */}
-      <div
-        data-aos="fade-up"
-        className="flex flex-col lg:flex-row justify-center items-center h-auto lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[40px] lg:gap-[96px] mt-[70px]"
-      >
-        {/* CARRUSEL */}
+      {/* CONTENIDO */}
+      {selectedSede && (
         <div
-          ref={emblaRef}
-          className="
+          data-aos="fade-up"
+          className="flex flex-col lg:flex-row justify-center items-center h-auto lg:px-0 lg:h-[552px] border-t border-b border-white/50 gap-[40px] lg:gap-[96px] mt-[70px]"
+        >
+          {/* CARRUSEL */}
+          <div
+            ref={emblaRef}
+            className="
       order-2 lg:order-1
       relative
       overflow-hidden
@@ -354,24 +356,24 @@ export default function SedesComp() {
       h-[300px] lg:h-full
       shrink-0
     "
-        >
-          <div className="flex h-full">
-            {sedeActual.imagenes.map((imagen, index) => (
-              <div key={index} className="relative min-w-full h-full">
-                <Image
-                  src={imagen}
-                  fill
-                  alt={sedeActual.nombre}
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
+          >
+            <div className="flex h-full">
+              {sedeActual?.imagenes.map((imagen, index) => (
+                <div key={index} className="relative min-w-full h-full">
+                  <Image
+                    src={imagen}
+                    fill
+                    alt={sedeActual.nombre}
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              ))}
+            </div>
 
-          {/* DOTS */}
-          <div
-            className="
+            {/* DOTS */}
+            <div
+              className="
         absolute
         bottom-[20px]
         left-1/2
@@ -380,12 +382,12 @@ export default function SedesComp() {
         gap-3
         z-20
       "
-          >
-            {sedeActual.imagenes.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => emblaApi?.scrollTo(index)}
-                className={`
+            >
+              {sedeActual?.imagenes.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  className={`
             w-3
             h-3
             rounded-full
@@ -394,14 +396,14 @@ export default function SedesComp() {
               selectedIndex === index ? "bg-[#F1EC16] scale-125" : "bg-white/40"
             }
           `}
-              />
-            ))}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* INFO */}
-        <div
-          className="
+          {/* INFO */}
+          <div
+            className="
     order-1 lg:order-2
     w-full lg:w-[450px]
     shrink-0
@@ -412,70 +414,71 @@ export default function SedesComp() {
     lg:items-start
     lg:text-start
     "
-        >
-          <h3 className="font-card font-light text-[36px] text-white">
-            SEDE <span className="font-bold">{sedeActual.nombre}</span>
-          </h3>
-          <div className="pt-[32px] flex flex-col gap-[24px]">
-            <div className="border-l-4 border-[#F1EC16] pl-4 space-y-4">
-              <div className="flex gap-[16px]">
-                <Image
-                  src="/logo/ubicacion.png"
-                  width={24}
-                  height={28}
-                  alt="ubicacion"
-                  unoptimized
-                />
-                <p className="text-white text-[18px] lg:text-[20px]">
-                  {sedeActual.ubicacion}
-                </p>
-              </div>
-              <div className="flex items-start gap-[16px]">
-                <Image
-                  src="/logo/reloj.png"
-                  width={24}
-                  height={28}
-                  alt="reloj"
-                  unoptimized
-                />
-                <div>
-                  <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
-                    {sedeActual.descripcion}
-                  </p>
-                  <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
-                    {sedeActual.descripcion2}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-[16px]">
-                <Image
-                  src="/logo/whatsapp.png"
-                  width={24}
-                  height={28}
-                  alt="whatsapp"
-                  unoptimized
-                />
-                <div>
+          >
+            <h3 className="font-card font-light text-[36px] text-white">
+              <span className="font-bold">{sedeActual?.nombre}</span>
+            </h3>
+            <div className="pt-[32px] flex flex-col gap-[24px]">
+              <div className="border-l-4 border-[#F1EC16] pl-4 space-y-4">
+                <div className="flex gap-[16px]">
+                  <Image
+                    src="/logo/ubicacion.png"
+                    width={24}
+                    height={28}
+                    alt="ubicacion"
+                    unoptimized
+                  />
                   <p className="text-white text-[18px] lg:text-[20px]">
-                    {sedeActual.whatsapp}
-                  </p>
-                  <p className="text-[#8E9192] font-description font-bold text-[14px]">
-                    WHATSAPP
+                    {sedeActual?.ubicacion}
                   </p>
                 </div>
-              </div>
-            </div>
+                <div className="flex items-start gap-[16px]">
+                  <Image
+                    src="/logo/reloj.png"
+                    width={24}
+                    height={28}
+                    alt="reloj"
+                    unoptimized
+                  />
+                  <div>
+                    <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
+                      {sedeActual?.descripcion}
+                    </p>
+                    <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
+                      {sedeActual?.descripcion2}
+                    </p>
+                  </div>
+                </div>
 
-            <Link
-              href="/formulario"
-              className="bg-[#F1EC16] px-[50px] py-[12px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300 self-center lg:self-start"
-            >
-              Inscribirme ahora
-            </Link>
+                <div className="flex items-start gap-[16px]">
+                  <Image
+                    src="/logo/whatsapp.png"
+                    width={24}
+                    height={28}
+                    alt="whatsapp"
+                    unoptimized
+                  />
+                  <div>
+                    <p className="text-white text-[18px] lg:text-[20px]">
+                      {sedeActual?.whatsapp}
+                    </p>
+                    <p className="text-[#8E9192] font-description font-bold text-[14px]">
+                      WHATSAPP
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                href="/formulario"
+                className="bg-[#F1EC16] px-[50px] py-[12px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300 self-center lg:self-start"
+              >
+                Inscribirme ahora
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
