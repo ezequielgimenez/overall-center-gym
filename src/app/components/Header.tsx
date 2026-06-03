@@ -86,15 +86,17 @@ export default function HeaderComp() {
       </div>
 
       <div className="hidden lg:flex max-w-7xl mx-auto py-8 flex justify-between items-center px-4">
-        <Image
-          src="/logo/logo-header.png"
-          width={245}
-          height={61}
-          className="cursor-pointer"
-          alt="Logo-Header"
-          priority
-          unoptimized
-        />
+        <Link href="/">
+          <Image
+            src="/logo/logo-header.png"
+            width={245}
+            height={61}
+            className="cursor-pointer"
+            alt="Logo-Header"
+            priority
+            unoptimized
+          />
+        </Link>
 
         <nav className="flex px-2">
           <ul className="flex justify-center items-center gap-20">

@@ -470,7 +470,7 @@ export default function SedesComp() {
               </div>
 
               <Link
-                href="/formulario"
+                href={`/formulario?sedeId=${sedeActual?.id}`}
                 className="bg-[#F1EC16] px-[50px] py-[12px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300 self-center lg:self-start"
               >
                 Inscribirme ahora

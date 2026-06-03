@@ -1,4 +1,11 @@
-export default function FormComp() {
+import { createPreference } from "@/src/actions/create-preference";
+
+type FormCompProps = {
+  sedeId: number;
+  planId?: string;
+};
+
+export default function FormComp({ sedeId, planId }: FormCompProps) {
   return (
     <div className="flex flex-col justify-center items-center px-[20px]">
       {/* TITULOS */}
@@ -18,17 +25,21 @@ export default function FormComp() {
 
       {/* FORM */}
       <form
+        action={createPreference}
         className="
           bg-[#626262]
           rounded-2xl
           p-5 lg:p-6
           w-full
           max-w-md
-          lg:h-[741px]
+          lg:max-h-[800px]
           shadow-[0px_4px_30.4px_rgba(241,236,22,0.34)]
           mb-[120px] lg:mb-[234px]
         "
       >
+        <input type="hidden" name="sedeId" value={sedeId} />
+        {planId && <input type="hidden" name="planId" value={planId} />}
+
         <div className="flex flex-col gap-4">
           <label className="font-sans text-white text-[14px]">
             Tu nombre y apellido
@@ -145,6 +156,46 @@ export default function FormComp() {
               focus:ring-[#c9c0c0]
             "
           />
+
+          {planId ? (
+            <div className="bg-[#4d4d4d] rounded-md p-3">
+              <p className="text-white text-sm">Plan seleccionado</p>
+
+              <p className="text-[#F1EC16] font-bold text-lg">
+                {planId.toUpperCase()}
+              </p>
+            </div>
+          ) : (
+            <>
+              <label className="font-sans text-white text-[14px]">Plan</label>
+
+              <select
+                name="planId"
+                required
+                className="
+        bg-white
+        border
+        text-[#444444]
+        border-gray-300
+        rounded-md
+        p-3
+        text-[16px]
+      "
+              >
+                <option value="">Seleccioná un plan</option>
+
+                <option value="mensual">Mensual</option>
+
+                <option value="plus">Plus</option>
+
+                <option value="trimestral">Trimestral</option>
+
+                <option value="semestral">Semestral</option>
+
+                <option value="anual">Anual</option>
+              </select>
+            </>
+          )}
 
           <p className="text-center text-white text-[13px] lg:text-[14px] pt-2 pb-[20px] lg:pb-[30px] leading-[22px]">
             Luego podrás realizar el pago de forma segura a través de Mercado

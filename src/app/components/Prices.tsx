@@ -214,7 +214,7 @@ export default function PricesSection() {
               </p>
               <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
                 <Link
-                  href="/formulario"
+                  href={`/formulario?sedeId=${sedeActual?.id}&planId=mensual`}
                   className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
                 >
                   Inscribirme ahora
@@ -242,7 +242,7 @@ export default function PricesSection() {
               </p>
               <div className="flex justify-center items-center  pb-[27px]">
                 <Link
-                  href="/formulario"
+                  href={`/formulario?sedeId=${sedeActual?.id}&planId=plus`}
                   className="bg-[#626262] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-white cursor-pointer font-description font-bold text-[16px] hover:bg-[#969691] transition-colors duration-300"
                 >
                   Inscribirme ahora
@@ -268,7 +268,7 @@ export default function PricesSection() {
               </p>
               <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
                 <Link
-                  href="/formulario"
+                  href={`/formulario?sedeId=${sedeActual?.id}&planId=trimestral`}
                   className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
                 >
                   Inscribirme ahora
@@ -294,7 +294,7 @@ export default function PricesSection() {
               </p>
               <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
                 <Link
-                  href="/formulario"
+                  href={`/formulario?sedeId=${sedeActual?.id}&planId=semestral`}
                   className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
                 >
                   Inscribirme ahora
@@ -320,7 +320,7 @@ export default function PricesSection() {
               </p>
               <div className="flex justify-center items-center pt-[75px]  pb-[27px]">
                 <Link
-                  href="/formulario"
+                  href={`/formulario?sedeId=${sedeActual?.id}&planId=anual`}
                   className="bg-[#F1EC16] px-[50px] py-[8px] rounded-[12px] border-2 border-white text-[#444444] cursor-pointer font-description font-bold text-[16px] hover:bg-[#f8f55c] transition-colors duration-300"
                 >
                   Inscribirme ahora
