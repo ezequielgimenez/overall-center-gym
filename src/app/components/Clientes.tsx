@@ -107,7 +107,9 @@ export default async function ClientesComp({ searchParams }: Props) {
 
               <p>
                 <strong>Fecha:</strong>{" "}
-                {c.paidAt ? new Date(c.paidAt).toLocaleDateString() : "-"}
+                {c.paidAt
+                  ? new Date(c.paidAt).toLocaleDateString("es-AR")
+                  : "-"}
               </p>
 
               <p className="text-lg font-bold pt-2">${c.monto}</p>
@@ -165,7 +167,9 @@ export default async function ClientesComp({ searchParams }: Props) {
                   </span>
                 </td>
                 <td className="p-4">
-                  {c.paidAt ? new Date(c.paidAt).toLocaleDateString() : "-"}
+                  {c.paidAt
+                    ? new Date(c.paidAt).toLocaleDateString("es-AR")
+                    : "-"}
                 </td>
                 <td className="p-4 font-bold">${c.monto}</td>
               </tr>
