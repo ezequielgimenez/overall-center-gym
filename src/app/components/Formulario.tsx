@@ -1,4 +1,7 @@
+"use client";
+
 import { createPreference } from "@/src/actions/create-preference";
+import { useMemo, useState } from "react";
 
 type FormCompProps = {
   sedeId: number;
@@ -6,6 +9,24 @@ type FormCompProps = {
 };
 
 export default function FormComp({ sedeId, planId }: FormCompProps) {
+  const [nacimiento, setNacimiento] = useState("");
+
+  const esMayorDeEdad = useMemo(() => {
+    if (!nacimiento) return true;
+
+    const fechaNacimiento = new Date(nacimiento);
+    const hoy = new Date();
+
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+    const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+    }
+
+    return edad >= 18;
+  }, [nacimiento]);
   return (
     <div className="flex flex-col justify-center items-center px-[20px]">
       {/* TITULOS */}
@@ -48,7 +69,7 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
           <input
             name="nombre"
             required
-            placeholder="Tu nombre"
+            placeholder="Tu nombre y apellido completo"
             className="
               bg-white
               border
@@ -95,19 +116,21 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
             name="nacimiento"
             type="date"
             required
+            value={nacimiento}
+            onChange={(e) => setNacimiento(e.target.value)}
             className="
-              bg-white
-              border
-              font-sans
-              text-[#444444]
-              border-gray-300
-              rounded-md
-              p-3
-              text-[16px]
-              outline-none
-              focus:ring-2
-              focus:ring-[#c9c0c0]
-            "
+                bg-white
+                border
+                font-sans
+                text-[#444444]
+                border-gray-300
+                rounded-md
+                p-3
+                text-[16px]
+                outline-none
+                focus:ring-2
+                focus:ring-[#c9c0c0]
+              "
           />
 
           <label className="font-sans text-white text-[14px]">Tu email</label>
@@ -201,28 +224,35 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
             Luego podrás realizar el pago de forma segura a través de Mercado
             Pago.
           </p>
-
-          <button
-            type="submit"
-            className="
-              bg-[#F1EC16]
-              w-full
-              py-[12px]
-              rounded-[12px]
-              border-2
-              border-white
-              text-[#444444]
-              cursor-pointer
-              font-description
-              font-bold
-              text-[16px]
-              hover:bg-[#f8f55c]
-              transition-colors
-              duration-300
-            "
-          >
-            Continuar
-          </button>
+          {nacimiento && !esMayorDeEdad && (
+            <p className="text-red-500 text-center font-description text-sm font-medium">
+              Si sos menor de edad, acercate a alguna de nuestras sedes con
+              autorización de un adulto responsable.
+            </p>
+          )}
+          {esMayorDeEdad && (
+            <button
+              type="submit"
+              className="
+                bg-[#F1EC16]
+                w-full
+                py-[12px]
+                rounded-[12px]
+                border-2
+                border-white
+                text-[#444444]
+                cursor-pointer
+                font-description
+                font-bold
+                text-[16px]
+                hover:bg-[#f8f55c]
+                transition-colors
+                duration-300
+              "
+            >
+              Continuar
+            </button>
+          )}
         </div>
       </form>
     </div>

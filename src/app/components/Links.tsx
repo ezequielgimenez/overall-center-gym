@@ -25,13 +25,13 @@ export function EnlacesComp() {
       />
       <div className="relative flex flex-col z-10 pt-[30px] lg:pt-[40px] gap-[16px] text-center">
         <Link
-          href="/#planes"
+          href="/precios"
           className="max-w-[320px] rounded-full bg-[#F1EC16] py-[16px] font-description text-[17px] text-[#444444] cursor-pointer hover:bg-[#f8f55c] transition-colors duration-300"
         >
           Ver precios
         </Link>
         <Link
-          href="/#sedes"
+          href="/sedes"
           className="max-w-[320px] rounded-full bg-[#F1EC16] px-8 py-[16px] font-description text-[17px] text-[#444444] cursor-pointer hover:bg-[#f8f55c] transition-colors duration-300"
         >
           Conocé nuestras sedes

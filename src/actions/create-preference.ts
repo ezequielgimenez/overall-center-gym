@@ -20,12 +20,10 @@ export async function createPreference(formData: FormData) {
   const telefono = formData.get("telefono") as string;
   const dni = formData.get("dni") as string;
 
-  console.log("Mi URL:", process.env.APP_URL);
-
   const sede = sedes.find((s) => s.id === sedeId);
 
   if (!sede) {
-    throw new Error("Sede no encontrada");
+    throw new Error("Sede con ese plan no encontrado");
   }
   const precio = sede.precios[planId];
 
