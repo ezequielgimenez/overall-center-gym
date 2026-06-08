@@ -84,9 +84,9 @@ export async function createPreference(formData: FormData) {
       external_reference: inscripcion.id.toString(),
 
       back_urls: {
-        success: `${process.env.APP_URL}/gracias`,
-        failure: `${process.env.APP_URL}/error-pago`,
-        pending: `${process.env.APP_URL}/pendiente`,
+        success: `http://overallcentergym.com/gracias`,
+        failure: `http://overallcentergym.com/error-pago`,
+        pending: `http://overallcentergym.com/pendiente`,
       },
 
       auto_return: "approved",
