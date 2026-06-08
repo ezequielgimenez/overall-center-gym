@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroComp() {
   return (
@@ -53,9 +54,11 @@ export default function HeroComp() {
               <span className="text-[#F1EC16]">duerme.</span>
             </p>
 
-            <button className="mt-[48px] sm:mt-8 bg-[#F1EC16] px-12 py-3 rounded-full font-description text-[#110F0F] text-[20px] font-semibold cursor-pointer hover:bg-gray-200 transition-colors duration-500 ease-in-out">
-              Ver todas las sedes
-            </button>
+            <Link href="/#sedes">
+              <button className="mt-[48px] sm:mt-8 bg-[#F1EC16] px-12 py-3 rounded-full font-description text-[#110F0F] text-[20px] font-semibold cursor-pointer hover:bg-gray-200 transition-colors duration-500 ease-in-out">
+                Ver todas las sedes
+              </button>
+            </Link>
           </div>
         </div>
       </div>
