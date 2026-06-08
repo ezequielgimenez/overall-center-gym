@@ -104,12 +104,12 @@ export default function FooterComp() {
         </div>
       </div>
       <div className="border-t border-white/10 text-center py-4">
-        <p className="font-description text-sm text-white/70">
+        <p className="font-description text-[12px] text-white/70">
           © {new Date().getFullYear()} Overall Center Gym. Todos los derechos
           reservados.
         </p>
 
-        <span className="font-sans text-white text-[14px]">
+        <span className="font-sans text-white text-[12px]">
           Desarrollado por{" "}
           <a
             href="https://www.webkelar.com.ar/"
