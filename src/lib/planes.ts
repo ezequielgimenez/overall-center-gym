@@ -18,7 +18,7 @@ export const sedes = [
     id: 2,
     nombre: "SEDE SAN MARTÍN",
     precios: {
-      mensual: 45000,
+      mensual: 100,
       plus: 54000,
       trimestral: 120000,
       semestral: 220000,
