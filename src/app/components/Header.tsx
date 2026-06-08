@@ -27,14 +27,16 @@ export default function HeaderComp() {
 
         {/* Logo centrado real */}
         <div className="absolute left-1/2 -translate-x-1/2 pl-4">
-          <Image
-            src="/logo/logo-mobile.png"
-            alt="Logo"
-            width={197}
-            height={49}
-            priority
-            unoptimized
-          />
+          <Link href="/">
+            <Image
+              src="/logo/logo-mobile.png"
+              alt="Logo"
+              width={197}
+              height={49}
+              priority
+              unoptimized
+            />
+          </Link>
         </div>
       </div>
 
