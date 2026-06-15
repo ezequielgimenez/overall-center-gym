@@ -90,6 +90,7 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
 
           <input
             name="dni"
+            type="number"
             required
             placeholder="DNI"
             className="
