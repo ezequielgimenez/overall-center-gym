@@ -218,8 +218,8 @@ export default function PricesSection() {
                 Acceso a todas nuestras sedes
               </p>
               <p className="font-description font-normal text-[#444444] text-[16px] pl-[27px] pr-[57px] pb-[32px]">
-                Incluye acceso <span className="font-bold">a un mes</span>{" "}
-                completo de gimnasio en cualquiera de nuestras sedes.
+                Incluye acceso a todas nuestras sedes <br /> durante
+                <span className="font-bold"> un mes</span>{" "}
               </p>
               <p className="font-description font-bold text-[#444444] text-[30px] pl-[27px]">
                 {sedeActual?.precios.plus}

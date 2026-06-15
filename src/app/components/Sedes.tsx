@@ -33,7 +33,7 @@ const sedes = [
     ubicacion: "San Martín 667",
     whatsapp: "+54 9 381 5158762 ",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion2: "Sábados y feriados: 09:00 - 21:00",
     visible: true,
     imagenes: [
       "/sedes/San-Martin/1.jpeg",
@@ -86,7 +86,7 @@ const sedes = [
     ubicacion: "Córdoba 580",
     whatsapp: "+54 9 381 2127867",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion2: "Sábados y feriados: 09:00 - 21:00",
     visible: true,
     imagenes: [
       "/sedes/Cordoba/1.jpeg",
@@ -192,7 +192,7 @@ const sedes = [
     ubicacion: "Adolfo de la Vega 460",
     whatsapp: "+54 9 381 4679990",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion2: "Sábados y feriados: 09:00 - 21:00",
     visible: true,
     imagenes: [
       "/sedes/Adolfo/1.jpeg",
@@ -219,7 +219,7 @@ const sedes = [
     ubicacion: "Cariola 173",
     whatsapp: "+54 9 381 5943775",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion2: "Sábados y feriados: 09:00 - 21:00",
     visible: true,
     imagenes: [
       "/sedes/Cariola/1.jpeg",
