@@ -123,7 +123,7 @@ export default function SedeButtons({
               >
                 {sede.nombre}
                 {sede.preventa && (
-                  <span className="bg-white text-sm text-[#454242] rounded-[16px] mx-2">
+                  <span className="bg-white text-sm text-[#454242] rounded-[16px] mx-2 px-1">
                     {sede.preventa}
                   </span>
                 )}
@@ -160,7 +160,7 @@ export default function SedeButtons({
               <span>{sede.nombre}</span>
 
               {sede.preventa && (
-                <span className="bg-white text-sm text-[#454242]">
+                <span className="bg-white text-sm text-[#454242] px-2">
                   {sede.preventa}
                 </span>
               )}
