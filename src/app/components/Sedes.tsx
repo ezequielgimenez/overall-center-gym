@@ -4,7 +4,7 @@ const sedes = [
   {
     id: 1,
     nombre: "SEDE AV ALEM",
-    preventa: "PROMO INAUGURACIÓN - $30.000",
+    preventa: "PROMO INAUGURACIÓN $30.000",
     precios: {
       mensual: "$30.000",
       plus: "$54.000",
@@ -12,8 +12,8 @@ const sedes = [
       semestral: "$228.000",
       anual: "$432.000",
     },
-    ubicacion: "Av. Alen 595",
-    whatsapp: "+54 9 381 5943775 ",
+    ubicacion: "Av. Alem 595",
+    whatsapp: "54 9 3814 67-4137",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
     descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
     visible: false,
