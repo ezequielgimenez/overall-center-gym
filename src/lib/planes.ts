@@ -4,7 +4,7 @@ export const sedes = [
     nombre: "SEDE AV ALEM",
     preventa: "PROMO INAUGURACIÓN $30.000",
     precios: {
-      mensual: 30000,
+      mensual: 48000,
       plus: 54000,
       trimestral: 132000,
       semestral: 228000,

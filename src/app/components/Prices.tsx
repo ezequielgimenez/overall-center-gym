@@ -4,9 +4,9 @@ const sedes = [
   {
     id: 1,
     nombre: "SEDE AV ALEM",
-    preventa: "PROMO INAUGURACIÓN $30.000",
+    preventa: "NUEVA SEDE",
     precios: {
-      mensual: "$30.000",
+      mensual: "$48.000",
       plus: "$54.000",
       trimestral: "$132.000",
       semestral: "$228.000",
