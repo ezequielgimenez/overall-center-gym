@@ -4,20 +4,28 @@ const sedes = [
   {
     id: 1,
     nombre: "SEDE AV ALEM",
-    preventa: "PROMO INAUGURACIÓN $30.000",
+    preventa: "",
     precios: {
-      mensual: "$30.000",
+      mensual: "$48.000",
       plus: "$54.000",
       trimestral: "$132.000",
       semestral: "$228.000",
       anual: "$432.000",
     },
     ubicacion: "Av. Alem 595",
-    whatsapp: "54 9 3814 67-4137",
+    whatsapp: "+54 9 3814 67-4137",
     descripcion: "Lunes a viernes: 06:00 - 00:00",
     descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
-    visible: false,
-    imagenes: ["/sedes/centro-1.jpeg"],
+    visible: true,
+    imagenes: [
+      "/sedes/Alem/1.webp",
+      "/sedes/Alem/2.webp",
+      "/sedes/Alem/3.webp",
+      "/sedes/Alem/4.webp",
+      "/sedes/Alem/5.webp",
+      "/sedes/Alem/6.webp",
+      "/sedes/Alem/7.webp",
+    ],
   },
 
   {
