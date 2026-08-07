@@ -14,8 +14,8 @@ const sedes = [
     },
     ubicacion: "Av. Alem 595",
     whatsapp: "+54 9 3814 67-4137",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/Alem/1.webp",
@@ -40,8 +40,8 @@ const sedes = [
     },
     ubicacion: "San Martín 667",
     whatsapp: "+54 9 381 5158762 ",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/San-Martin/1.jpeg",
@@ -93,8 +93,8 @@ const sedes = [
     },
     ubicacion: "Córdoba 580",
     whatsapp: "+54 9 381 2127867",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/Cordoba/1.jpeg",
@@ -117,8 +117,8 @@ const sedes = [
     },
     ubicacion: "Av. Raya 830",
     whatsapp: "+54 9 381 2085643",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/Lomas/1.jpeg",
@@ -167,8 +167,8 @@ const sedes = [
     },
     ubicacion: "Monseñor Diaz 363",
     whatsapp: "+54 9 381 2065860",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados, domingos y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/La-banda/1.jpeg",
@@ -199,8 +199,8 @@ const sedes = [
     },
     ubicacion: "Adolfo de la Vega 460",
     whatsapp: "+54 9 381 4679990",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/Adolfo/1.jpeg",
@@ -226,8 +226,8 @@ const sedes = [
     },
     ubicacion: "Cariola 173",
     whatsapp: "+54 9 381 5943775",
-    descripcion: "Lunes a viernes: 06:00 - 00:00",
-    descripcion2: "Sábados y feriados: 09:00 - 21:00",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
     visible: true,
     imagenes: [
       "/sedes/Cariola/1.jpeg",
@@ -424,10 +424,10 @@ export default function SedesComp() {
                     unoptimized
                   />
                   <div>
-                    <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
+                    <p className="whitespace-pre-line sm:whitespace-normal text-white text-[18px] lg:text-[20px] leading-[32px]">
                       {sedeActual?.descripcion}
                     </p>
-                    <p className="text-white text-[18px] lg:text-[20px] leading-[32px]">
+                    <p className="whitespace-pre-line sm:whitespace-normal text-white text-[18px] lg:text-[20px] leading-[32px]">
                       {sedeActual?.descripcion2}
                     </p>
                   </div>
