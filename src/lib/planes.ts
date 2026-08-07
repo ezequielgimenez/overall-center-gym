@@ -46,7 +46,7 @@ export const sedes = [
     id: 4,
     nombre: "SEDE CÓRDOBA",
     precios: {
-      mensual: 45000,
+      mensual: 48000,
       plus: 54000,
       trimestral: 120000,
       semestral: 220000,
