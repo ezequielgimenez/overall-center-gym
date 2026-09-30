@@ -44,21 +44,21 @@ export default function SedeButtons({
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="
-              w-[343px]
-              border-4
-              border-[#F1EC16]
-              py-[8px]
-              px-[24px]
-              rounded-[20px]
-              font-mono
-              font-semibold
-              text-white
-              text-[20px]
-              flex
-              items-center
-              justify-between
-              shrink-0
-          "
+        w-[343px]
+        border-4
+        border-[#F1EC16]
+        py-[8px]
+        px-[24px]
+        rounded-[20px]
+        font-mono
+        font-semibold
+        text-white
+        text-[20px]
+        flex
+        items-center
+        justify-between
+        shrink-0
+      "
           >
             {sedeActual?.nombre ?? title}
             <div>
@@ -72,73 +72,80 @@ export default function SedeButtons({
             </div>
           </button>
         </div>
+
         {/* LISTA */}
-        {mobileOpen && (
-          <div
-            className="
-            bg-[#626262]/95
-              absolute
-              top-[110%]
-              left-1/2
-              -translate-x-1/2
-              w-[331px]
-              h-[780px]
-              sm: w-[375px]
-              sm:h-[860px]
-              flex
-              flex-col
-              justify-center
-              items-center
-              gap-6
-              z-30
-              rounded-[35px]
-              
-            "
-          >
-            <h3 className="font-card text-center font-bold text-white text-[28px] ">
-              Elegí tu sede
-            </h3>
-            {sedes.map((sede) => (
-              <button
-                key={sede.id}
-                onClick={() => {
-                  onSelect(sede.id);
-                  setMobileOpen(false);
-                }}
-                className="
-                bg-[#626262]/70
-                 border-3 border-[#F1EC16] shadow-[3px_6px_10.5px_rgba(241,236,22,0.92)]
-                  w-[167px]
-                  sm:w-[250px]
-                  text-[16px]
-                  rounded-[20px]
-                  py-[5px]
-                  sm:py-[10px]
-                  font-mono
-                  font-semibold
-                  text-white
-                  flex
-                  flex-col
-                "
-              >
-                {sede.nombre}
-                {sede.preventa && (
-                  <span className="bg-white text-sm text-[#454242] rounded-[16px] mx-2 px-1">
-                    {sede.preventa}
-                  </span>
-                )}
-              </button>
-            ))}
-            <h3
+        <div
+          className={`
+      bg-[#626262]/95
+      absolute
+      top-[110%]
+      left-1/2
+      -translate-x-1/2
+      w-[331px]
+      h-[780px]
+      sm:w-[375px]
+      sm:h-[860px]
+      flex
+      flex-col
+      justify-center
+      items-center
+      gap-6
+      z-30
+      rounded-[35px]
+      transition-all
+      duration-300
+      ease-out
+      ${mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
+    `}
+        >
+          <h3 className="font-card text-center font-bold text-white text-[28px]">
+            Elegí tu sede
+          </h3>
+
+          {sedes.map((sede) => (
+            <button
+              key={sede.id}
               onClick={() => {
+                onSelect(sede.id);
                 setMobileOpen(false);
               }}
-              className="font-card text-center font-bold text-white text-[20px] "
+              className="
+          bg-[#626262]/70
+          border-3
+          border-[#F1EC16]
+          shadow-[3px_6px_10.5px_rgba(241,236,22,0.92)]
+          w-[167px]
+          sm:w-[250px]
+          text-[16px]
+          rounded-[20px]
+          py-[5px]
+          sm:py-[10px]
+          font-mono
+          font-semibold
+          text-white
+          flex
+          flex-col
+        "
             >
-              Cerrar
-            </h3>
-          </div>
-        )}
+              {sede.nombre}
+
+              {sede.preventa && (
+                <span className="bg-white text-sm text-[#454242] rounded-[16px] mx-2 px-1">
+                  {sede.preventa}
+                </span>
+              )}
+            </button>
+          ))}
+
+          <h3
+            onClick={() => {
+              setMobileOpen(false);
+            }}
+            className="font-card text-center font-bold text-white text-[20px]"
+          >
+            Cerrar
+          </h3>
+        </div>
       </div>
 
       {/* DESKTOP */}
