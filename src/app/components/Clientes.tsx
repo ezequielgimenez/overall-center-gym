@@ -43,7 +43,7 @@ export default async function ClientesComp({ searchParams }: Props) {
         <input
           type="text"
           name="search"
-          placeholder="Buscar por nombre y apellido del cliente..."
+          placeholder="Buscar por nombre o apellido del cliente..."
           defaultValue={search}
           className="bg-white rounded-lg px-4 py-3 flex-1"
         />
@@ -55,6 +55,7 @@ export default async function ClientesComp({ searchParams }: Props) {
         >
           <option value="">Todas las sedes</option>
 
+          <option value="SEDE TAFI VIEJO">SEDE TAFI VIEJO</option>
           <option value="SEDE AV ALEM">SEDE AV ALEM</option>
 
           <option value="SEDE SAN MARTÍN">SEDE SAN MARTÍN</option>
@@ -64,7 +65,6 @@ export default async function ClientesComp({ searchParams }: Props) {
           <option value="SEDE LOMAS">SEDE LOMAS</option>
           <option value="SEDE 9 DE JULIO">SEDE 9 DE JULIO</option>
           <option value="SEDE LA BANDA">SEDE LA BANDA</option>
-          <option value="SEDE TAFI VIEJO">SEDE TAFI VIEJO</option>
           <option value="SEDE CARIOLA">SEDE CARIOLA</option>
           <option value="SEDE YERBA BUENA">SEDE YERBA BUENA</option>
         </select>
