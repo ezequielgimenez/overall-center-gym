@@ -64,7 +64,7 @@ export default async function ClientesComp({ searchParams }: Props) {
           <option value="SEDE LOMAS">SEDE LOMAS</option>
           <option value="SEDE 9 DE JULIO">SEDE 9 DE JULIO</option>
           <option value="SEDE LA BANDA">SEDE LA BANDA</option>
-          <option value="SEDE ADOLFO">SEDE ADOLFO</option>
+          <option value="SEDE TAFI VIEJO">SEDE TAFI VIEJO</option>
           <option value="SEDE CARIOLA">SEDE CARIOLA</option>
           <option value="SEDE YERBA BUENA">SEDE YERBA BUENA</option>
         </select>
