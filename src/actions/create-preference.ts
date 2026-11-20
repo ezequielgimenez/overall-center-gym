@@ -8,12 +8,24 @@ import { sedes } from "../lib/planes";
 
 export async function createPreference(formData: FormData) {
   const sedeId = Number(formData.get("sedeId"));
-  const planId = formData.get("planId") as
-    | "mensual"
-    | "plus"
-    | "trimestral"
-    | "semestral"
-    | "anual";
+  const planesValidos = [
+    "mensual",
+    "plus",
+    "trimestral",
+    "semestral",
+    "anual",
+  ] as const;
+
+  const planRecibido = formData.get("planId");
+
+  if (
+    typeof planRecibido !== "string" ||
+    !planesValidos.includes(planRecibido as (typeof planesValidos)[number])
+  ) {
+    throw new Error("Plan no válido");
+  }
+
+  const planId = planRecibido as (typeof planesValidos)[number];
   const nombre = formData.get("nombre") as string;
   const email = formData.get("email") as string;
   const nacimiento = formData.get("nacimiento") as string;
@@ -23,9 +35,15 @@ export async function createPreference(formData: FormData) {
   const sede = sedes.find((s) => s.id === sedeId);
 
   if (!sede) {
-    throw new Error("Sede con ese plan no encontrado");
+    throw new Error("Sede no encontrada");
   }
+
   const precio = sede.precios[planId];
+
+  // Validar que el plan exista y tenga un precio válido
+  if (typeof precio !== "number" || !Number.isFinite(precio) || precio <= 0) {
+    throw new Error("Este plan no está disponible en la sede seleccionada");
+  }
 
   const inscripcion = await prisma.inscripcion.create({
     data: {
