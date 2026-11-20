@@ -123,3 +123,5 @@ export const sedes = [
     imagenes: ["/sedes/yb-1.jpg"],
   },
 ];
+
+// dsdsd
