@@ -6,9 +6,17 @@ import { useMemo, useState } from "react";
 type FormCompProps = {
   sedeId: number;
   planId?: string;
+  planesDisponibles: {
+    id: string;
+    nombre: string;
+  }[];
 };
 
-export default function FormComp({ sedeId, planId }: FormCompProps) {
+export default function FormComp({
+  sedeId,
+  planId,
+  planesDisponibles,
+}: FormCompProps) {
   const [nacimiento, setNacimiento] = useState("");
 
   const esMayorDeEdad = useMemo(() => {
@@ -181,14 +189,18 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
             "
           />
 
-          {planId ? (
-            <div className="bg-[#4d4d4d] rounded-md p-3">
-              <p className="text-white text-sm">Plan seleccionado</p>
+          {planId && planesDisponibles.some((p) => p.id === planId) ? (
+            <>
+              <div className="bg-[#4d4d4d] rounded-md p-3">
+                <p className="text-white text-sm">Plan seleccionado</p>
 
-              <p className="text-[#F1EC16] font-bold text-lg">
-                {planId.toUpperCase()}
-              </p>
-            </div>
+                <p className="text-[#F1EC16] font-bold text-lg">
+                  {planesDisponibles.find((p) => p.id === planId)?.nombre}
+                </p>
+              </div>
+
+              <input type="hidden" name="planId" value={planId} />
+            </>
           ) : (
             <>
               <label className="font-sans text-white text-[14px]">Plan</label>
@@ -196,6 +208,7 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
               <select
                 name="planId"
                 required
+                defaultValue=""
                 className="
         bg-white
         border
@@ -206,17 +219,15 @@ export default function FormComp({ sedeId, planId }: FormCompProps) {
         text-[16px]
       "
               >
-                <option value="">Seleccioná un plan</option>
+                <option value="" disabled>
+                  Seleccioná un plan
+                </option>
 
-                <option value="mensual">Mensual</option>
-
-                <option value="plus">Plus</option>
-
-                <option value="trimestral">Trimestral</option>
-
-                <option value="semestral">Semestral</option>
-
-                <option value="anual">Anual</option>
+                {planesDisponibles.map((plan) => (
+                  <option key={plan.id} value={plan.id}>
+                    {plan.nombre}
+                  </option>
+                ))}
               </select>
             </>
           )}

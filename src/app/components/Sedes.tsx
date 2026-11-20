@@ -3,6 +3,24 @@
 const sedes = [
   {
     id: 1,
+    nombre: "SEDE TAFI VIEJO",
+    preventa: "PREVENTA - $30.000",
+    precios: {
+      mensual: "$30.000",
+      plus: "$60.000",
+      trimestral: "$85.000",
+      semestral: "$260.000",
+      anual: "$495.000",
+    },
+    ubicacion: "Ruta 9 y Constitución, Tafi Viejo",
+    whatsapp: "+54 9 3815 15-8762",
+    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
+    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
+    visible: true,
+    imagenes: ["/sedes/Tafi-viejo/1.webp"],
+  },
+  {
+    id: 2,
     nombre: "SEDE AV ALEM",
     preventa: "",
     precios: {
@@ -29,7 +47,7 @@ const sedes = [
   },
 
   {
-    id: 2,
+    id: 3,
     nombre: "SEDE SAN MARTÍN",
     precios: {
       mensual: "$55.000",
@@ -54,7 +72,7 @@ const sedes = [
   },
 
   {
-    id: 3,
+    id: 4,
     nombre: "SEDE BELGRANO",
     precios: {
       mensual: "$55.000",
@@ -82,7 +100,7 @@ const sedes = [
   },
 
   {
-    id: 4,
+    id: 5,
     nombre: "SEDE CÓRDOBA",
     precios: {
       mensual: "$55.000",
@@ -106,7 +124,7 @@ const sedes = [
   },
 
   {
-    id: 5,
+    id: 6,
     nombre: "SEDE LOMAS",
     precios: {
       mensual: "$55.000",
@@ -131,7 +149,7 @@ const sedes = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     nombre: "SEDE 9 DE JULIO",
     precios: {
       mensual: "$55.000",
@@ -156,7 +174,7 @@ const sedes = [
   },
 
   {
-    id: 7,
+    id: 8,
     nombre: "SEDE LA BANDA",
     precios: {
       mensual: "$55.000",
@@ -184,34 +202,6 @@ const sedes = [
       "/sedes/La-banda/11.jpeg",
       "/sedes/La-banda/12.jpeg",
       "/sedes/La-banda/13.jpeg",
-    ],
-  },
-
-  {
-    id: 8,
-    nombre: "SEDE ADOLFO",
-    precios: {
-      mensual: "$55.000",
-      plus: "$60.000",
-      trimestral: "$150.000",
-      semestral: "$260.000",
-      anual: "$495.000",
-    },
-    ubicacion: "Adolfo de la Vega 460",
-    whatsapp: "+54 9 381 4679990",
-    descripcion: "Lunes a viernes:\n06:00 - 00:00 hs",
-    descripcion2: "Sábados y feriados:\n09:00 - 21:00 hs",
-    visible: true,
-    imagenes: [
-      "/sedes/Adolfo/1.jpeg",
-      "/sedes/Adolfo/2.jpeg",
-      "/sedes/Adolfo/3.jpeg",
-      "/sedes/Adolfo/4.jpeg",
-      "/sedes/Adolfo/5.jpeg",
-      "/sedes/Adolfo/6.jpeg",
-      "/sedes/Adolfo/7.jpeg",
-      "/sedes/Adolfo/8.jpeg",
-      "/sedes/Adolfo/9.jpeg",
     ],
   },
   {

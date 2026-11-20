@@ -4,8 +4,9 @@ type Sede = {
   preventa?: string;
   precios: {
     mensual: string;
-    trimestral: string;
-    anual: string;
+    plus?: string;
+    trimestral?: string;
+    anual?: string;
   };
   descripcion: string;
   descripcion2?: string;
